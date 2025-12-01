@@ -1,0 +1,84 @@
+// Objects Example
+// Demonstrates object creation and usage
+
+// Simple object
+let person = {
+    name: "Alice",
+    age: 30,
+    city: "New York"
+};
+
+print("Person:", person);
+print("Name:", person.name);
+print("Age:", person.age);
+
+// Object with methods
+let calculator = {
+    add: function(a, b) {
+        return a + b;
+    },
+    subtract: function(a, b) {
+        return a - b;
+    },
+    multiply: function(a, b) {
+        return a * b;
+    },
+    divide: function(a, b) {
+        if (b == 0) {
+            return "Error: Division by zero";
+        }
+        return a / b;
+    }
+};
+
+print("10 + 5 =", calculator.add(10, 5));
+print("10 - 5 =", calculator.subtract(10, 5));
+print("10 * 5 =", calculator.multiply(10, 5));
+print("10 / 5 =", calculator.divide(10, 5));
+
+// Object with 'this' keyword
+let counter = {
+    count: 0,
+    increment: function() {
+        this.count = this.count + 1;
+    },
+    decrement: function() {
+        this.count = this.count - 1;
+    },
+    reset: function() {
+        this.count = 0;
+    },
+    getCount: function() {
+        return this.count;
+    }
+};
+
+counter.increment();
+counter.increment();
+counter.increment();
+print("Count after 3 increments:", counter.getCount());
+
+counter.decrement();
+print("Count after 1 decrement:", counter.getCount());
+
+counter.reset();
+print("Count after reset:", counter.getCount());
+
+// Nested objects
+let company = {
+    name: "TechCorp",
+    employees: [
+        {name: "Alice", role: "Developer"},
+        {name: "Bob", role: "Designer"},
+        {name: "Charlie", role: "Manager"}
+    ],
+    address: {
+        street: "123 Main St",
+        city: "San Francisco",
+        state: "CA"
+    }
+};
+
+print("Company:", company.name);
+print("First employee:", company.employees[0].name);
+print("City:", company.address.city);

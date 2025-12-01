@@ -1,0 +1,27 @@
+// Variables and Basic Operations
+// Demonstrates variable declaration and basic arithmetic
+
+// Variable declarations
+let x = 10;
+let y = 20;
+const PI = 3.14159;
+
+// Basic arithmetic
+print("x =", x);
+print("y =", y);
+print("x + y =", x + y);
+print("x * y =", x * y);
+print("y / x =", y / x);
+print("y % x =", y % x);
+
+// Working with strings
+let name = "Alice";
+let greeting = "Hello, " + name + "!";
+print(greeting);
+
+// Boolean operations
+let is_true = true;
+let is_false = false;
+print("true and false =", is_true and is_false);
+print("true or false =", is_true or is_false);
+print("not true =", not is_true);

@@ -1,0 +1,47 @@
+// Control Flow Examples
+// Demonstrates if-else statements and loops
+
+// If-else statement
+let age = 18;
+
+if (age >= 18) {
+    print("You are an adult");
+} else {
+    print("You are a minor");
+}
+
+// If-elif-else chain
+let score = 85;
+
+if (score >= 90) {
+    print("Grade: A");
+} elif (score >= 80) {
+    print("Grade: B");
+} elif (score >= 70) {
+    print("Grade: C");
+} elif (score >= 60) {
+    print("Grade: D");
+} else {
+    print("Grade: F");
+}
+
+// While loop
+print("\nCounting to 5:");
+let counter = 1;
+while (counter <= 5) {
+    print(counter);
+    counter = counter + 1;
+}
+
+// For loop with range
+print("\nSquares of numbers 1-5:");
+for (i in range(1, 6)) {
+    print(i, "squared is", i * i);
+}
+
+// For loop with array
+print("\nIterating over array:");
+let fruits = ["apple", "banana", "cherry"];
+for (fruit in fruits) {
+    print("I like", fruit);
+}

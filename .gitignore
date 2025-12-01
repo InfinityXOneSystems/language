@@ -1,0 +1,51 @@
+# Build artifacts
+*.o
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.a
+
+# Language runtime artifacts
+*.pyc
+*.pyo
+__pycache__/
+*.class
+*.jar
+*.war
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Dependency directories
+node_modules/
+vendor/
+venv/
+env/
+
+# Build directories
+build/
+dist/
+target/
+bin/
+obj/
+
+# Log files
+*.log
+
+# Test coverage
+coverage/
+*.cover
+.coverage
+htmlcov/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
