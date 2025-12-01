@@ -1,0 +1,59 @@
+// Functions Example
+// Demonstrates function definition and usage
+
+// Simple function
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+print(greet("World"));
+print(greet("Alice"));
+
+// Function with multiple parameters
+function add(a, b) {
+    return a + b;
+}
+
+print("10 + 20 =", add(10, 20));
+
+// Function with default behavior
+function power(base, exponent) {
+    let result = 1;
+    let count = 0;
+    while (count < exponent) {
+        result = result * base;
+        count = count + 1;
+    }
+    return result;
+}
+
+print("2^3 =", power(2, 3));
+print("5^2 =", power(5, 2));
+
+// Recursive function
+function factorial(n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+print("5! =", factorial(5));
+print("10! =", factorial(10));
+
+// Function that returns a function
+function multiplier(factor) {
+    return function(x) {
+        return x * factor;
+    };
+}
+
+let double = multiplier(2);
+let triple = multiplier(3);
+
+print("double(5) =", double(5));
+print("triple(5) =", triple(5));
+
+// Arrow function (shorter syntax)
+let square = (x) => x * x;
+print("square(7) =", square(7));

@@ -1,0 +1,52 @@
+// Arrays and Array Methods
+// Demonstrates array operations and methods
+
+// Creating arrays
+let numbers = [1, 2, 3, 4, 5];
+let mixed = [1, "two", 3.0, true, null];
+
+print("numbers:", numbers);
+print("mixed:", mixed);
+
+// Accessing elements
+print("First element:", numbers[0]);
+print("Last element:", numbers[4]);
+
+// Array methods
+numbers.push(6);
+print("After push(6):", numbers);
+
+let last = numbers.pop();
+print("Popped element:", last);
+print("After pop():", numbers);
+
+// Map: transform each element
+let doubled = numbers.map(function(x) {
+    return x * 2;
+});
+print("Doubled:", doubled);
+
+// Filter: select elements matching condition
+let evens = numbers.filter(function(x) {
+    return x % 2 == 0;
+});
+print("Even numbers:", evens);
+
+// Reduce: combine all elements
+let sum = numbers.reduce(function(acc, x) {
+    return acc + x;
+}, 0);
+print("Sum:", sum);
+
+// Array with arrow functions
+let squares = numbers.map((x) => x * x);
+print("Squares:", squares);
+
+// Nested arrays
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+print("Matrix:", matrix);
+print("matrix[1][1] =", matrix[1][1]);

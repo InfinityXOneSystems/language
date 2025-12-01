@@ -1,0 +1,107 @@
+// Classes Example
+// Demonstrates class definition and inheritance
+
+// Basic class
+class Animal {
+    constructor(name, species) {
+        this.name = name;
+        this.species = species;
+    }
+    
+    speak() {
+        return this.name + " makes a sound.";
+    }
+    
+    info() {
+        return this.name + " is a " + this.species;
+    }
+}
+
+let generic = Animal("Generic", "Unknown");
+print(generic.speak());
+print(generic.info());
+
+// Inheritance
+class Dog extends Animal {
+    constructor(name, breed) {
+        super(name, "Dog");
+        this.breed = breed;
+    }
+    
+    speak() {
+        return this.name + " barks!";
+    }
+    
+    fetch() {
+        return this.name + " is fetching the ball!";
+    }
+}
+
+let buddy = Dog("Buddy", "Golden Retriever");
+print(buddy.speak());
+print(buddy.info());
+print(buddy.fetch());
+print("Breed:", buddy.breed);
+
+// Another derived class
+class Cat extends Animal {
+    constructor(name, color) {
+        super(name, "Cat");
+        this.color = color;
+    }
+    
+    speak() {
+        return this.name + " meows!";
+    }
+    
+    purr() {
+        return this.name + " is purring...";
+    }
+}
+
+let whiskers = Cat("Whiskers", "Orange");
+print(whiskers.speak());
+print(whiskers.info());
+print(whiskers.purr());
+print("Color:", whiskers.color);
+
+// Class with more complex behavior
+class BankAccount {
+    constructor(owner, balance) {
+        this.owner = owner;
+        this.balance = balance;
+        this.transactions = [];
+    }
+    
+    deposit(amount) {
+        if (amount > 0) {
+            this.balance = this.balance + amount;
+            this.transactions.push({type: "deposit", amount: amount});
+            return "Deposited " + amount + ". New balance: " + this.balance;
+        }
+        return "Invalid deposit amount";
+    }
+    
+    withdraw(amount) {
+        if (amount > 0 and amount <= this.balance) {
+            this.balance = this.balance - amount;
+            this.transactions.push({type: "withdrawal", amount: amount});
+            return "Withdrew " + amount + ". New balance: " + this.balance;
+        }
+        return "Invalid withdrawal amount or insufficient funds";
+    }
+    
+    getBalance() {
+        return this.balance;
+    }
+    
+    getStatement() {
+        return "Account holder: " + this.owner + ", Balance: " + this.balance;
+    }
+}
+
+let account = BankAccount("Alice", 1000);
+print(account.getStatement());
+print(account.deposit(500));
+print(account.withdraw(200));
+print(account.getStatement());
