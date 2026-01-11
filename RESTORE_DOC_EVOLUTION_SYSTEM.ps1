@@ -5,10 +5,10 @@
 
 $ErrorActionPreference = "Stop"
 
-Write-Host "`n♾ Restoring Doc Evolution System..." -ForegroundColor Cyan
+Write-Output "`n♾ Restoring Doc Evolution System..."
 
 git clone https://github.com/InfinityXOneSystems/doc_evolution_system.git
-cd doc_evolution_system
+Set-Location doc_evolution_system
 
 python -c "
 import sys
@@ -17,4 +17,4 @@ import doc_sync
 print('✅ doc_sync package restored')
 "
 
-Write-Host "♾ SYSTEM RESTORED — READY FOR OPERATION" -ForegroundColor Green
+Write-Output "♾ SYSTEM RESTORED — READY FOR OPERATION"

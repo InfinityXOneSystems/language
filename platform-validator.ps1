@@ -12,7 +12,7 @@ Set-Location $ROOT
 $STATE_DIR      = "$ROOT\.infinity"
 $REPORT_DIR     = "$STATE_DIR\reports"
 $QUARANTINE_DIR = "$STATE_DIR\quarantine"
-$LOG_FILE       = "$STATE_DIR\validator.log"
+
 $TIMESTAMP      = Get-Date -Format "yyyyMMdd-HHmmss"
 
 New-Item -ItemType Directory -Force $STATE_DIR      | Out-Null
